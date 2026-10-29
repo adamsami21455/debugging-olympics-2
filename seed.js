@@ -21,7 +21,7 @@ const zaidSchema = new mongoose.Schema({
 const Zaid = mongoose.model('Zaid',zaidSchema)
 
 
-async function conntectToDB(){ //connection to the database
+async function connectToDB(){ //connection to the database
     try{
         await mongoose.connect(process.env.MONGODB_URI)
         console.log("Connected to Database")
@@ -40,7 +40,7 @@ async function conntectToDB(){ //connection to the database
 
 
 async function seedZaids(){
-    await conntectToDB()
+    await connectToDB()
     
     const seededZaids = await Zaid.insertMany([
         {
