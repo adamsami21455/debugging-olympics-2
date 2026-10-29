@@ -9,7 +9,7 @@ const morgan = require('morgan')
 
 
 
-async function conntectToDB(){ //connection to the database
+async function connectToDB(){ //connection to the database
     try{
         await mongoose.connect(process.env.MONGODB_URI)
         console.log("Connected to Database")
@@ -42,7 +42,7 @@ app.use(morgan('dev'))
 // Routes go here
 
 app.get('/',(req,res)=>{
-    res.render('homepage')
+    res.render('homepage.ejs')
 })
 
 
