@@ -3,7 +3,7 @@ const express = require("express") //importing express package
 const app = express() // creates a express application
 const dotenv = require("dotenv").config() //this allows me to use my .env values in this file
 const mongoose = require("mongoose")
-const Zaid = require('./models/Ziad')
+const Zaid = require('./models/Zaid')
 const methodOverride = require('method-override')
 const morgan = require('morgan')
 
